@@ -1,0 +1,16 @@
+id: SecurePreview
+name: SecurePreview
+version: 1.0
+author_link: http://save-dep-mukku.blogspot.jp/
+author_name: SHINCHI, Takahiro
+description: Provide secure preview.
+
+applications:
+    cms:
+        methods:
+            preview_entry_secure:
+                code: $SecurePreview::SecurePreview::App::preview_entry_secure
+                requires_login: 1
+
+callbacks:
+    MT::App::CMS::template_output.edit_entry: $SecurePreview::SecurePreview::Transformer::hdlr_template_output_edit_entry
