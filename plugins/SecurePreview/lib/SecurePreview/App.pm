@@ -4,8 +4,6 @@ use strict;
 use warnings;
 use MT::CMS::Entry;
 
-use base qw( MT::App::CMS );
-
 sub preview_entry_secure {
     my $app = shift;
 
